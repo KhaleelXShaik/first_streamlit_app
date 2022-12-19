@@ -33,7 +33,7 @@ else:
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     streamlit.dataframe(fruityvice_normalized)
    
-export URLError as e:
+except URLError as e:
   streamlit.error()
   
 streamlit.stop()
